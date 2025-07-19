@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulir Pendaftaran</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #74EBD5 0%, #9FACE6 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .form-container {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 500px;
+    }
+    h2 {
+      text-align: center;
+      color: #3A0CA3;
+      margin-bottom: 30px;
+    }
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    input[type="submit"] {
+      background-color: #3A0CA3;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    input[type="submit"]:hover {
+      background-color: #2a0782;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <form action="https://formspree.io/f/xgvzvbbr" method="POST">
+      <h2>Formulir Pendaftaran</h2>
+
+      <input type="text" name="nama_lengkap" placeholder="Nama Lengkap" required>
+      <input type="date" name="tanggal_lahir" placeholder="Tanggal Lahir" required>
+      <input type="text" name="asal_sekolah_kampus" placeholder="Asal Sekolah / Kampus" required>
+      <input type="text" name="jurusan" placeholder="Jurusan" required>
+      <input type="tel" name="no_hp" placeholder="No. HP / WhatsApp" required>
+      <input type="email" name="email" placeholder="Email Aktif" required>
+
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://example.com/terima-kasih.html">
+
+      <input type="submit" value="Daftar Sekarang">
+    </form>
+  </div>
+</body>
+</html>
